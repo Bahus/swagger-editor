@@ -18,12 +18,20 @@ SwaggerEditor.controller('MainCtrl', function MainCtrl(
   // TODO: find a better way to add the branding class (grunt html template)
   $('body').addClass(defaults.brandingCssClass);
 
+  $scope.enableViewMode = defaults.enableViewMode;
   loadYaml();
 
   /*
   * Load Default or URL YAML
   */
+
   function loadYaml() {
+    // if view mode is enabled, just load specified file
+    if (defaults.enableViewMode) {
+      var url = defaults.examplesFolder + defaults.viewModeDefaultFile + '?_=' + (new Date().getTime());
+      FileLoader.loadFromUrl(url, Boolean($stateParams['no-proxy'])).then(assign);
+      return;
+    }
 
     Storage.load('yaml').then(function (yaml) {
       var url;

@@ -10,7 +10,7 @@
     <div class="editor pane" ui-layout-container>
       <div ui-view="editor"></div>
     </div>
-    <div class="preview pane" ui-layout-container>
+    <div class="preview pane" ui-layout-container size="{{ (enableViewMode + 0) * 50 + 50 + '%' }}">
       <div ui-view="preview"></div>
     </div>
   </div>

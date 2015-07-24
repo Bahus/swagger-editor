@@ -10,11 +10,14 @@
       "id": "UA-51231036-1"
     }
   },
-  "disableCodeGen": false,
+  "disableCodeGen": true,
   "examplesFolder": "spec-files/",
   "editorOptions": {
-    "theme": "ace/theme/atom_dark"
+    "theme": "ace/theme/atom_dark",
+    "fontFamily": "monospace"
   },
+  "enableViewMode": true,
+  "viewModeDefaultFile": "default.yaml",
   "exampleFiles": [
     "default.yaml",
     "heroku-pets.yaml",
@@ -35,8 +38,8 @@
   "useYamlBackend": false,
   "disableFileMenu": false,
   "headerBranding": false,
-  "disableNewUserIntro": false,
-  "enableTryIt": true,
+  "disableNewUserIntro": true,
+  "enableTryIt": false,
   "brandingCssClass": "",
   "importProxyUrl": "https://cors-it.herokuapp.com/?url="
 }
